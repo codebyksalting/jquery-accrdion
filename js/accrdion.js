@@ -3,9 +3,10 @@
 
         // Default options
         var configuration = $.extend({
-            openFirstByDefault: true, // true, false
-            displayStyle: 'single', // single, any
-            toggleSpeed: 400 // milliseconds, slow, fast
+            openFirstByDefault: true,   // [true, false]
+            displayStyle: 'single',     // ['single', 'any']
+            toggleSpeed: 400,           // [milliseconds, 'slow', 'fast']
+            scrollToActive: true        // [true, false]
         }, options );
 
         return this.each( function() {
