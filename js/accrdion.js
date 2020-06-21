@@ -56,7 +56,7 @@
             // Main event handler
             $_accrdion_wrapper.on( 'click', '.accrdion-header', function( event ) {
                 const $_clicked = $(this);
-                const $_item = $_clicked.parent();
+                let $_item = $_clicked.parent();
                 const $_wrapper = $_item.parent();
                 const $_index = $_item.index();
                 
@@ -86,8 +86,14 @@
                 }
 
                 if ( $_flag ) {
-                    $_item.toggleClass( 'accrdion-active' );
-                    $_clicked.next().toggle( configuration.toggleSpeed );
+                    $_clicked.next().toggle( configuration.toggleSpeed, function() {
+                        // Add the active class and scroll to current item top
+                        $_item.toggleClass( 'accrdion-active' );
+
+                        $('html, body').animate({
+                            scrollTop: $_item.offset().top - 20 // Add breathing space
+                        }, configuration.scrollSpeed);
+                    });
                 }
             });
         });
