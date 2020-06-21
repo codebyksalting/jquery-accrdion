@@ -20,6 +20,7 @@
  * @param {string} displayStyle Close all others when or open/close the current item
  * @param {integer/string} toggleSpeed The animation speed in milliseconds or string (slow/fast)
  * @param {boolean} scrollToActive Scroll to the top of the current item
+ * @param {integer/string} scrollSpeed The animation speed in milliseconds
  */
 (function( $ ) {
     $.fn.accrdion = function( options ) {
@@ -29,7 +30,8 @@
             openFirstByDefault: true,   // [true, false]
             displayStyle: 'single',     // ['single', 'any']
             toggleSpeed: 400,           // [milliseconds, 'slow', 'fast']
-            scrollToActive: true        // [true, false]
+            scrollToActive: true,       // [true, false]
+            scrollSpeed: 500,           // [milliseconds]
         }, options );
 
         return this.each( function() {
