@@ -18,7 +18,8 @@
             // Set initial behavior 
             $_accrdion_item.each( function( index ) {
                 $_item = $(this);
-              
+            
+                // If openFirstByDefault is true, leave the first one open by default
                 if ( configuration.openFirstByDefault && index == 0 ) {
                     $_item.addClass( 'accrdion-active' );
                 } else {
