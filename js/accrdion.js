@@ -1,3 +1,26 @@
+/**
+ * Copyright © 2020 Kendrick Salting
+ * 
+ * https://github.com/codebyksalting/jquery-accrdion
+ * 
+ * Licensed under the GNU General Public License v3.0
+ * 
+ * https://github.com/codebyksalting/jquery-accrdion/blob/master/LICENSE
+ * 
+ * Permissions of this strong copyleft license are conditioned 
+ * on making available complete source code of licensed works 
+ * and modifications, which include larger works using 
+ * a licensed work, under the same license. Copyright 
+ * and license notices must be preserved. Contributors 
+ * provide an express grant of patent rights.
+ *
+ * jQuery.accrdion()
+ * 
+ * @param {boolean} openFirstByDefault Open the first item by default
+ * @param {string} displayStyle Close all others when or open/close the current item
+ * @param {integer/string} toggleSpeed The animation speed in milliseconds or string (slow/fast)
+ * @param {boolean} scrollToActive Scroll to the top of the current item
+ */
 (function( $ ) {
     $.fn.accrdion = function( options ) {
 
