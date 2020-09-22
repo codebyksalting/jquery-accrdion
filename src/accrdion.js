@@ -1,5 +1,5 @@
 /**
- * Copyright © 2020 Kendrick Salting
+ * Copyright © 2020 KSalting
  * 
  * https://github.com/codebyksalting/jquery-accrdion
  * 
