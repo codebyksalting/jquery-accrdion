@@ -90,9 +90,11 @@
                         // Add the active class and scroll to current item top
                         $_item.toggleClass( 'accrdion-active' );
 
-                        $('html, body').animate({
-                            scrollTop: $_item.offset().top - 20 // Add breathing space
-                        }, configuration.scrollSpeed);
+                        if ( configuration.scrollToActive ) {
+                            $('html, body').animate({
+                                scrollTop: $_item.offset().top - 20 // Add breathing space
+                            }, configuration.scrollSpeed);
+                        }
                     });
                 }
             });
